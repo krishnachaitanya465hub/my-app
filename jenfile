@@ -18,5 +18,10 @@ pipeline {
                 sh "mvn package -f my-app"
             }
         }
+         stage('deploy') { 
+            steps {
+                sh "cp /root/.jenkins/workspace/pipeline-2/target/my-app-1.0-SNAPSHOT.jar /opt/apache-tomcat-8.5.35/webapps/"
+            }
+        }
     }
 }
