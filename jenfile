@@ -4,7 +4,7 @@ pipeline {
         stage('clone repo') { 
             steps {
                 sh "rm -rf my-app"
-                sh "git clone https://github.com/satsbit/my-app.git"
+                sh "git clone https://github.com/krishnachaitanya465hub/my-app.git"
                 sh "mvn clean -f my-app"
             }
         }
